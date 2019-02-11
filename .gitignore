@@ -1,0 +1,12 @@
+# eclipse stuff
+.settings
+.project
+.pydevproject
+*.pyc
+
+# virtual env dirs
+bin
+lib
+include
+pip-selfcheck.json
+/target/
