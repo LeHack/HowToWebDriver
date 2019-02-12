@@ -10,7 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 import utils.Config;
 
 public class MoveThings {
-    private static final Logger logger = Logger.getLogger("FindThings");
+    private static final Logger logger = Config.getLogger(MoveThings.class);
 
     public static void main(String[] args) {
         new MoveThings();

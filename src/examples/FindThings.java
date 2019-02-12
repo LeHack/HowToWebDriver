@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 import utils.Config;
 
 public class FindThings {
-    private static final Logger logger = Logger.getLogger("FindThings");
+    private static final Logger logger = Config.getLogger(FindThings.class);
 
     public static void main(String[] args) {
         new FindThings();

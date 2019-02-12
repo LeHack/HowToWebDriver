@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxBinary;
@@ -20,10 +22,17 @@ public final class Config {
 
     public Config() {
         try {
+            LogManager.getLogManager().reset();
+            LogManager.getLogManager().readConfiguration(new FileInputStream(new File("configs/logging.properties")));
             cfg.load(new FileInputStream("configs/settings.properties"));
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @SuppressWarnings("rawtypes")
+    public static Logger getLogger(Class cls) {
+        return Logger.getLogger(cls.getName());
     }
 
     public String get(String propName) {

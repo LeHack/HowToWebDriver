@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import utils.Config;
 
 public class Start {
-    private static final Logger logger = Logger.getGlobal();
+    private static final Logger logger = Config.getLogger(Start.class);
 
     public static void main(String[] args) {
         new Start();
