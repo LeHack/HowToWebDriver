@@ -32,7 +32,7 @@ public class ChangeThings {
     public void changeStuff(WebDriver drv) {
         WebElement elem = drv.findElement(By.id("nameInput"));
         elem.clear();
-        elem.sendKeys("Grafield");
+        elem.sendKeys("Garfield");
         elem.sendKeys(Keys.ENTER);
         logger.info("The new kitty name is: " + elem.getAttribute("value"));
 
