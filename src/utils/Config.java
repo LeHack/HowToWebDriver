@@ -36,7 +36,7 @@ public final class Config {
         gecko.version("0.24.0");
         gecko.setup();
 
-        // for local sessions, the lock serves the purpose of keeping the display Id
+        // init a Firefox binary
         FirefoxBinary ffBin = new FirefoxBinary();
         ffBin.addCommandLineOptions("--maximized");
 
