@@ -7,5 +7,6 @@ To run the examples first make sure to have a test site set up:
 
 Examples:
 - Start.java - how to start a Firefox instance and point it to your test site
-- ...
-- ...
+- FindThings.java - a bunch of methods to get different information from a website (using xpaths and CSS paths)
+- ChangeThings.java - clicking and typing
+- MoveThings.java - more advanced mouse related actions (action chaining)
