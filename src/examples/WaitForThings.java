@@ -6,11 +6,17 @@ import java.util.logging.Logger;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotInteractableException;
+import org.openqa.selenium.InvalidElementStateException;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
+
+import com.google.common.base.Function;
 
 import utils.Config;
 
@@ -68,7 +74,45 @@ public class WaitForThings {
             logger.info("If you see this, we most likely exceeded the max timeout. The page may be hanged on an error and will never complete loading.");
         }
 
-        logger.info("Aaand we're done!");
+        logger.info("Now get back to Kitty");
+        select.selectByVisibleText("Kitty");
+
+        // And now let's use WebDrivers native waiting technique: the Fluent wait
+        // same parameters as above, 10s max, check every 250ms, wait while it's visible
+        FluentWait<WebDriver> wait = new FluentWait<>(drv)
+            .withTimeout(Duration.ofSeconds(10))
+            .pollingEvery(Duration.ofMillis(250))
+            // when dealing with moving targets, it's good to take some precautions
+            .ignoring(StaleElementReferenceException.class)
+            .ignoring(InvalidElementStateException.class);
+
+        // if the wait times out, it will throw a timeout exception
+        try {
+            wait.until(new Function<WebDriver, Boolean>() {
+
+                // now let's define when to end the wait
+                public Boolean apply(WebDriver drv) {
+                    boolean out = false; // it's a good rule to always start from a worst case scenario
+
+                    try {
+                        WebElement elem = drv.findElement(By.id("loading"));
+                        // element present but not visible
+                        out = !elem.isDisplayed();
+                    }
+                    catch (NoSuchElementException e) {
+                        // element not present
+                        out = true;
+                    }
+
+                    return out;
+                }
+            });
+        }
+        catch (TimeoutException e) {
+            logger.info("The wait timed out.");
+        }
+
+        logger.info("Ok, Kitty is loaded again.");
     }
 
     /**
