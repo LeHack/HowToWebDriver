@@ -9,6 +9,7 @@ Examples (recommended order of reading/running):
 - Start.java - how to start a Firefox instance and point it to your test site
 - FindThings.java - a bunch of methods to get different information from a website (using xpaths and CSS paths)
 - ChangeThings.java - clicking and typing
+- WaitForThings.java - fluently waiting for events on the site (also OPTION handling)
 - MoveThings.java - more advanced mouse related actions (action chaining)
 - BreakThings.java - common WebDriver exceptions handling
 - ScriptThings.java - using custom JavaScript with WebDriver

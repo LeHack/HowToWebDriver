@@ -59,7 +59,7 @@ var Kitty = new function() {
 	    document.onmousemove = dragKitty;
 	    document.onmouseup = closeDrag;
 	}
-	
+
 	this.respond = function(e) {
 		if (e.keyCode === 13) {
 			let old = document.getElementsByClassName("kittyName thing");
@@ -71,6 +71,31 @@ var Kitty = new function() {
 			elem.className = 'kittyName thing';
 			elem.textContent = "That's nice, I like " + value;
 			document.getElementsByClassName("kittyName")[0].appendChild(elem);
+		}
+	}
+
+	this.change = function(what) {
+		let elem = document.getElementById("kitty");
+		if (elem) {
+			elem.style.display = "none";
+			elem.style.backgroundImage = "url('" + what + "')";
+			let loader = document.createElement('span');
+			loader.id = "loading";
+			loader.className = "loader";
+			loader.appendChild( document.createTextNode("Loading...") );
+			document.body.appendChild(loader);
+			setTimeout(this.hideLoading, 2500);
+		}
+	}
+
+	this.hideLoading = function() {
+		let loader = document.getElementById("loading");
+		if (loader) {
+			loader.remove();
+		}
+		let elem = document.getElementById("kitty");
+		if (elem) {
+			elem.style.display = "block";
 		}
 	}
 };

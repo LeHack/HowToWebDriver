@@ -18,6 +18,13 @@
 Type name for kitty: <input id="nameInput" type="text" value="Tiger"></input>
 </div>
 
+<div class="petType">
+Pet type: <select onChange="Kitty.change(this.options[this.selectedIndex].value)">
+<option selected="selected" value="kitty.png">Kitty</option>
+<option value="doggy.png">Doggy</option>
+</select>
+</div>
+
 <div class="thing kittyStart">
 <input type="button" value="Show me a kitty" onClick="Kitty.toggle()"></input>
 </div>
