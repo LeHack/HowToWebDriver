@@ -4,6 +4,7 @@ import java.util.logging.Logger;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementClickInterceptedException;
+import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.InvalidElementStateException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
@@ -125,6 +126,15 @@ public class BreakThings {
             logger.info("XXX This code will never run");
         }
         catch (InvalidElementStateException e) {
+            logger.info("The kitty we knew is gone. We need to go look for him first.");
+        }
+
+        try {
+            kitty = drv.findElement(By.id("kitty"));
+            kitty.click();
+            logger.info("XXX This code will also never run");
+        }
+        catch (ElementNotInteractableException e) {
             logger.info("Invisible Kitties are like Ninjas: definitely not clickable.");
         }
 

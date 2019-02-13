@@ -21,10 +21,12 @@ import org.testng.annotations.AfterMethod;
 
 import utils.Config;
 
-/*
+/**
  * You need to have TestNG plugin installed in Eclipse to run this.
  * Try Help -> Install new software and sitename: http://beust.com/eclipse
  * Then use Run As -> TestNG Test
+ *
+ * Note: make sure to checkout the getScreenshot() and cleanup() methods
  */
 public class TestThings {
     private static final Logger logger = Config.getLogger(TestThings.class);

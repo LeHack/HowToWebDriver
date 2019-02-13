@@ -45,5 +45,7 @@ public class ChangeThings {
 
         logger.info("Hiding kitty");
         button.click();
+
+        // see WaitForThings, for an example on how to properly interact with a dropdown (SELECT tag)
     }
 }
