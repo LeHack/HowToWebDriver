@@ -141,6 +141,9 @@ public class WaitForThings {
                     break;
                 }
             }
+            catch (StaleElementReferenceException|InvalidElementStateException e) {
+                // ignore
+            }
             catch (NoSuchElementException e) {
                 // also stop if the element was not found (and hence it cannot be visible)
                 result = true;
