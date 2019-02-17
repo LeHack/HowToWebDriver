@@ -6,11 +6,11 @@ To run the examples first make sure to have a test site set up:
 - run: ```python -m SimpleHTTPServer```
 
 Examples (recommended order of reading/running):
-- [Start.java](src/examples/Start.java) - how to start a Firefox instance and point it to your test site
-- [FindThings.java](src/examples/FindThings.java) - a bunch of methods to get different information from a website (using xpaths and CSS paths)
-- [ChangeThings.java](src/examples/ChangeThings.java) - clicking and typing
-- [WaitForThings.java](src/examples/WaitForThings.java) - fluently waiting for events on the site (also OPTION handling)
-- [MoveThings.java](src/examples/MoveThings.java) - more advanced mouse related actions (action chaining)
-- [BreakThings.java](src/examples/BreakThings.java) - common WebDriver exceptions handling
-- [ScriptThings.java](src/examples/ScriptThings.java) - using custom JavaScript with WebDriver
-- [TestThings.java](src/examples/TestThings.java) - simple TestNG integration
+- [Start.java](src/examples/ex1_Start.java) - how to start a Firefox instance and point it to your test site
+- [FindThings.java](src/examples/ex2_FindThings.java) - a bunch of methods to get different information from a website (using xpaths and CSS paths)
+- [ChangeThings.java](src/examples/ex3_ChangeThings.java) - clicking and typing
+- [WaitForThings.java](src/examples/ex4_WaitForThings.java) - fluently waiting for events on the site (also OPTION handling)
+- [MoveThings.java](src/examples/ex5_MoveThings.java) - more advanced mouse related actions (action chaining)
+- [BreakThings.java](src/examples/ex6_BreakThings.java) - common WebDriver exceptions handling
+- [ScriptThings.java](src/examples/ex7_ScriptThings.java) - using custom JavaScript with WebDriver
+- [TestThings.java](src/examples/ex8_TestThings.java) - simple TestNG integration
