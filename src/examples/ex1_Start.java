@@ -6,14 +6,14 @@ import org.openqa.selenium.WebDriver;
 
 import utils.Config;
 
-public class Start {
-    private static final Logger logger = Config.getLogger(Start.class);
+public class ex1_Start {
+    private static final Logger logger = Config.getLogger(ex1_Start.class);
 
     public static void main(String[] args) {
-        new Start();
+        new ex1_Start();
     }
 
-    public Start() {
+    public ex1_Start() {
         Config cfg = new Config();
 
         // Look at util.Config.createInstance for details

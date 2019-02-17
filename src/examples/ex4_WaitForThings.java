@@ -20,14 +20,14 @@ import com.google.common.base.Function;
 
 import utils.Config;
 
-public class WaitForThings {
-    private static final Logger logger = Config.getLogger(WaitForThings.class);
+public class ex4_WaitForThings {
+    private static final Logger logger = Config.getLogger(ex4_WaitForThings.class);
 
     public static void main(String[] args) {
-        new WaitForThings();
+        new ex4_WaitForThings();
     }
 
-    public WaitForThings() {
+    public ex4_WaitForThings() {
         Config cfg = new Config();
 
         // Look at util.Config.createInstance for details

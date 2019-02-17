@@ -16,15 +16,15 @@ import org.openqa.selenium.interactions.Actions;
 
 import utils.Config;
 
-public class BreakThings {
-    private static final Logger logger = Config.getLogger(BreakThings.class);
+public class ex6_BreakThings {
+    private static final Logger logger = Config.getLogger(ex6_BreakThings.class);
     private WebDriver drv = null;
 
     public static void main(String[] args) {
-        new BreakThings();
+        new ex6_BreakThings();
     }
 
-    public BreakThings() {
+    public ex6_BreakThings() {
         Config cfg = new Config();
 
         // Look at util.Config.createInstance for details

@@ -9,14 +9,14 @@ import org.openqa.selenium.WebElement;
 
 import utils.Config;
 
-public class ChangeThings {
-    private static final Logger logger = Config.getLogger(ChangeThings.class);
+public class ex3_ChangeThings {
+    private static final Logger logger = Config.getLogger(ex3_ChangeThings.class);
 
     public static void main(String[] args) {
-        new ChangeThings();
+        new ex3_ChangeThings();
     }
 
-    public ChangeThings() {
+    public ex3_ChangeThings() {
         Config cfg = new Config();
 
         // Look at util.Config.createInstance for details

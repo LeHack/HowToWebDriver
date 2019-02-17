@@ -9,14 +9,14 @@ import org.openqa.selenium.interactions.Actions;
 
 import utils.Config;
 
-public class MoveThings {
-    private static final Logger logger = Config.getLogger(MoveThings.class);
+public class ex5_MoveThings {
+    private static final Logger logger = Config.getLogger(ex5_MoveThings.class);
 
     public static void main(String[] args) {
-        new MoveThings();
+        new ex5_MoveThings();
     }
 
-    public MoveThings() {
+    public ex5_MoveThings() {
         Config cfg = new Config();
 
         // Look at util.Config.createInstance for details

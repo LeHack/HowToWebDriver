@@ -9,14 +9,14 @@ import org.openqa.selenium.WebElement;
 
 import utils.Config;
 
-public class FindThings {
-    private static final Logger logger = Config.getLogger(FindThings.class);
+public class ex2_FindThings {
+    private static final Logger logger = Config.getLogger(ex2_FindThings.class);
 
     public static void main(String[] args) {
-        new FindThings();
+        new ex2_FindThings();
     }
 
-    public FindThings() {
+    public ex2_FindThings() {
         Config cfg = new Config();
 
         // Look at util.Config.createInstance for details

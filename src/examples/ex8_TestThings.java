@@ -28,11 +28,11 @@ import utils.Config;
  *
  * Note: make sure to checkout the getScreenshot() and cleanup() methods
  */
-public class TestThings {
-    private static final Logger logger = Config.getLogger(TestThings.class);
+public class ex8_TestThings {
+    private static final Logger logger = Config.getLogger(ex8_TestThings.class);
     private final WebDriver drv;
 
-    public TestThings() {
+    public ex8_TestThings() {
         Config cfg = new Config();
 
         // Look at util.Config.createInstance for details
