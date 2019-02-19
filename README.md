@@ -14,3 +14,6 @@ Examples (recommended order of reading/running):
 - [BreakThings.java](src/examples/ex6_BreakThings.java) - common WebDriver exceptions handling
 - [ScriptThings.java](src/examples/ex7_ScriptThings.java) - using custom JavaScript with WebDriver
 - [TestThings.java](src/examples/ex8_TestThings.java) - simple TestNG integration
+
+Note: my company decided to release an addon I designed as open source. This addon was created to allow fetching console.log entries remotely using WebDriver 3.x (while Mozilla struggles to fix https://github.com/mozilla/geckodriver/issues/284). With my approach, you don't need to access the stdout of geckodriver (which is quite handy, when you use Selenium Grid).
+See https://github.com/hurracom/WebConsoleTap
