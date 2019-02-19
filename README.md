@@ -1,4 +1,4 @@
-# HowToWebDriver
+# HowToWebDriver :book:
 This repo contains a bunch of examples on how to use WebDriver 3.x using it's Java bindings.
 
 To run the examples first make sure to have a test site set up:
